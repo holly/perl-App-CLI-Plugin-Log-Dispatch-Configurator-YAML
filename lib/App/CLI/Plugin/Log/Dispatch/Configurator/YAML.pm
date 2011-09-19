@@ -2,13 +2,13 @@ package App::CLI::Plugin::Log::Dispatch::Configurator::YAML;
 
 use strict;
 use warnings;
-use base qw(Class::Data::Accessor);
+use base qw(Class::Accessor::Grouped);
 use Log::Dispatch::Config;
 use Log::Dispatch::Configurator::YAML;
 
-__PACKAGE__->mk_classaccessor("log");
+__PACKAGE__->mk_group_accessors(inherited => "log");
 
-our $VERSION = '1.0';
+our $VERSION = '1.1';
 
 sub setup {
 
@@ -28,7 +28,7 @@ App::CLI::Plugin::Log::Dispatch::Configurator::YAML - for App::CLI::Extension ea
 
 =head1 VERSION
 
-1.0
+1.1
 
 =head1 SYNOPSIS
 
